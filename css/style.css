@@ -1,0 +1,90 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+h1 {
+  margin: 0 0 2em 0;
+  background-color: #eee;
+  padding: 0.5em;
+  width: 100%;
+  text-align: center;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: darkblue;
+  width: 440px;
+  padding: 5px;
+  perspective: 800px;
+}
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 1em 0;
+}
+
+h2 {
+	font-size: 2em;
+	margin: 0;
+}
+
+.menu button {
+	margin: 0.5em;
+	padding: 0.5em;
+	color: darkblue;
+	font-size: 1em;
+	font-weight: bold;
+	width: 8em;
+	background-color: #eee;
+	border-radius: 0.5em;
+	outline: none;
+	cursor: pointer;
+}
+
+.menu h2 {
+  color: #eee;
+}
+
+.carte {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.cache {
+  background-color: #eee;
+  width: 100px;
+  height: 100px;
+  backface-visibility: hidden;
+}
+
+.cache:hover {
+  background-color: #ccc;
+}
+
+.image {
+  background-image: url('../image/test.png');
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  backface-visibility: hidden;
+  transform: rotateY( 180deg );
+}
+
+.invisible {
+  display: none;
+}
+
+.carte.flipped {
+  transform: rotateY( 180deg );
+}
